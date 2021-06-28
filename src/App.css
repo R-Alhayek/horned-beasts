@@ -45,18 +45,19 @@ h1 {
   padding: 20px;
 }
 
-img {
-  width: 550px;
-  height: 400px;
+
+
+#title {
+  margin-left: 40px; 
+}
+#description{
+  margin-left: 40px; 
+}
+#clicks {
   margin-left: 40px;
+  
 }
 
-.title {
-  margin-left: 40px; 
-}
-.description{
-  margin-left: 40px; 
-}
 
 #footer {
   background-color: rgb(163, 248, 220);
