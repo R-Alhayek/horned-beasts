@@ -8,9 +8,9 @@ class Main extends React.Component {
         return (
             <div >
 
-                {Data.map ((item)=>{
+                {Data.map ((item, index)=>{
                     return (
-                        <HornedBeasts animalTitle={item.title} animalImg={item.image_url} animalDes={item.description}/>  
+                        <HornedBeasts key={index} animalTitle={item.title} animalImg={item.image_url} animalDes={item.description} animalHorn={item.horns}/>  
                     )
                 })
                 }

@@ -1,7 +1,8 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button'
-import CardGroup from 'react-bootstrap/CardGroup'
+import SelectedBeast from './SelectedBeast';
+
 
 
 class HornedBeasts extends React.Component {
@@ -9,7 +10,8 @@ class HornedBeasts extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            numberOfClicks: 0
+            numberOfClicks: 0,
+            showCard: false
         }
     }
 
@@ -19,26 +21,42 @@ class HornedBeasts extends React.Component {
         })
     }
 
+    handleModalShow = () => {
+        this.setState({
+            showCard: true
+        })
+    }
+
+    handleModalClose = () => {
+        this.setState({
+            showCard: false
+        })
+    }
+
     render() {
         return (
-            <div>
+            <div id="card">
 
-                <Card style={{ width: '18rem' }}>
-                    <Card.Img variant="top" src= {this.props.animalImg} alt={this.props.animalTitle} />
+
+                <Card style={{ width: '18rem' }} onClick={this.handleModalShow}>
+                    <Card.Img variant="top" src={this.props.animalImg} alt={this.props.animalTitle} />
                     <Card.Body>
                         <Card.Title>{this.props.animalTitle}</Card.Title>
+                        <Card.Title>🦄 Beast Horns: {this.props.animalHorn}</Card.Title>
                         <Card.Text>
-                        {this.props.animalDes}
+                            {this.props.animalDes}
                         </Card.Text>
                         <Card.Text>
-                        ❤️ {this.state.numberOfClicks}
+                            ❤️ {this.state.numberOfClicks}
                         </Card.Text>
                         <Button onClick={this.increaseClicksNum} variant="info">Vote</Button>{' '}
                     </Card.Body>
                 </Card>
 
 
-                
+                <SelectedBeast show={this.state.showCard} close={this.handleModalClose} title={this.props.animalTitle} src={this.props.animalImg} description={this.props.animalDes}/>
+
+
             </div>
         )
     }

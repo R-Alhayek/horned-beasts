@@ -67,3 +67,7 @@ h1 {
   text-align: center;
 }
 
+#card {
+  display: inline-block;
+  margin-left: 15px;
+}
