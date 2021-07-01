@@ -116,6 +116,16 @@ Finish time: next day 5pm _____
 Actual time needed to complete: a whole day_____
 .............
 
+# LAB 4:
+Number and name of feature:  #1: Filter by Numbers of Horns
+
+Estimate of time needed to complete: 2 hours_____
+
+Start time: 2:30pm_____
+
+Finish time: next day 4pm _____
+
+Actual time needed to complete: 1:30 hour_____
 
 
 
